@@ -59,7 +59,7 @@ img.icon-sm {
     -ms-transform: translate(-25%, 25%); /* IE 9 */
     -webkit-transform: translate(-25%, 25%); /* Chrome, Safari, Opera */
 }
-form {
+.center, form {
     width: 100%;
     display: flex;
     flex-flow: column;
