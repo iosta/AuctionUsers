@@ -50,7 +50,5 @@ public class AuctionService {
 
     public static boolean ofrecerArticulo(Item item) { return auctionDao.ofrecerArticulo(item); }
 
-    public static Usuario obtenerUsuario(String usernameToEdit) {
-        return auctionDao.obtenerUsuario(usernameToEdit);
-    }
+    public static Usuario obtenerUsuario(String nombreUsuario) { return auctionDao.obtenerUsuario(nombreUsuario); }
 }
