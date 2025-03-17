@@ -152,7 +152,7 @@ div form:last-child .btn {
     width: 100%;
     display: flex;
     flex-flow: column;
-    align-items: flex-end;
+    align-items: left;
 }
 .input-element-horizontal {
     padding-left: 20px;
