@@ -23,7 +23,7 @@
                 <label for="index-password">Contraseña</label>
                 <input type="password" name="password" id="index-password" placeholder="Introduzca contraseña"
                     required>
-                <h3 class="mensajeerror">ℹ️ Error, usuario o contraseña incorrectos.</h3>
+                <h3 class="mensajeerror">Error, usuario o contraseña incorrectos.</h3>
                 <input type="submit" class="index-submit" value="Ingresar">
             </form>
         </div>
