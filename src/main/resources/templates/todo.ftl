@@ -6,42 +6,44 @@
     <title>Menú</title>
     <link rel="icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
-    <div class="main-container">
-
-        <h1>TODO</h1>
-
-        <form action="" method="post" class="layout">
-
-            <div class="w12 input-element-vertical">
-                <h2>Para hacer ${username}</h2>
-            </div>
-
-        </form>
-
-        <hr/>
-
-        <div class="input-element-horizontal bigger-margin-bottom">
-            <form action="/exit" method="get" class="no-min-display">
-                <button type="submit" class="btn btn-md no-margin-bottom no-margin-top"><img class="icon-sm" src="/imgs/icons/exit.png"/>Salir</button>
-            </form>
-            <form action="/menu" method="get">
-                <button type="submit" class="btn btn-md no-margin-bottom no-margin-top"><img class="icon-sm" src="/imgs/icons/menu.png"/>Menú</button>
-            </form>
-        </div>
-
-        <div id="menu">
-            <a href="/menu">
-                <img class="icon-lg" src="/imgs/icons/menu.png" alt="menu" title="menu"/>
-            </a>
-        </div>
-        <div id="return">
-            <a href="/menu">
-                <img class="icon-lg" src="/imgs/icons/return.png" alt="regresar" title="regresar"/>
-            </a>
-        </div>
+    <div class="encuadre-informacion">
+        <header class="barra-navegacion">
+            <nav>
+                <ul>
+                    <li><img class="imagen-usuario" src="img/icono-usuario.png" alt="Icono de usuario">
+                    </li>
+                    <li>
+                        <p class="texto-usuario">Cuenta de Admin</p>
+                    </li>
+                    <li>
+                        <a href="index.html" class="cerrar-sesion">
+                            <p class="texto-cerrar-sesion">Cerrar <br> Sesión</p>
+                            <div class="cerrar-sesion-div-img">
+                                <img class="cerrar-sesion-img" src="img/cerrar-sesion.png" alt="Cerrar sesión">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <table id="notas">
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+            </tr>
+            <#list usuarios as usr>
+                <tr>
+                    <td><a href="${'nota/' + usr.nombre}" class="boton">${usr.nombre}</a></td>
+                    <td>${usr.rol!""}</td>
+                    <td><a href="${'edita-nota/' + usr.nombre}">Editar</a></td>
+                    <td><a href="${'elimina-nota/' + usr.nombre}">Borrar</a></td>
+                </tr>
+            </#list>
+        </table>
     </div>
 </body>
 </html>

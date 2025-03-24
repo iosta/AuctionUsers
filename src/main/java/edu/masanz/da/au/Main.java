@@ -22,8 +22,8 @@ public class Main {
         app.get("/menu", MainController::mostrarMenu);
         app.post("/autenticar", MainController::autenticar);
 
-        app.post("/admin/user-management", MainController::gestionarUsuarios);
-        app.get("/admin/user-management", MainController::gestionarUsuarios);
+        app.post("/todo", MainController::gestionarUsuarios);
+        app.get("/todo", MainController::gestionarUsuarios);
 
         app.get("/admin/*", MainController::iniciar);
         app.post("/admin/*", MainController::iniciar);

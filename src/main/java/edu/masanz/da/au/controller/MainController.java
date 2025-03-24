@@ -5,6 +5,7 @@ import edu.masanz.da.au.dto.*;
 
 import io.javalin.http.Context;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -76,9 +77,15 @@ public class MainController {
             context.redirect("/error");
             return;
         }
+
+        List<Usuario> usuarios = Usuario.listaUsuarios();
+
         Map<String, Object> model = new HashMap<>();
         model.put("username", username);
+        model.put("usuarios", usuarios);
         context.render("/templates/todo.ftl", model);
     }
+
+
 
 }
