@@ -19,8 +19,8 @@ public class Main {
         app.get("/error", MainController::iniciar);
         app.get("/exit", MainController::iniciar);
 
-        app.post("/autenticar", MainController::autenticar);
         app.get("/menu", MainController::mostrarMenu);
+        app.post("/autenticar", MainController::autenticar);
 
         app.post("/admin/user-management", MainController::gestionarUsuarios);
         app.get("/admin/user-management", MainController::gestionarUsuarios);

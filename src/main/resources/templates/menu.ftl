@@ -10,36 +10,109 @@
 <body>
     <div class="main-container">
         <#if isAdministrator>
-            <h1>Menú Administrador</h1>
-            <form action="/admin/validate-items" method="post">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/accept.png"/>Validar artículos</button>
-            </form>
-            <form action="/admin/bidding-list-global" method="post">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/list.png"/>Listar artículos y pujas</button>
-            </form>
-            <form action="/admin/reset" method="post">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/reset.png"/>Resetear sistema</button>
-            </form>
-            <form action="/admin/winners-list" method="post">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/winners.png"/>Histórico ganadores</button>
-            </form>
-            <form action="/admin/user-management" method="post">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/users.png"/>Gestionar usuarios</button>
-            </form>
-            <form action="/exit" method="get">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/exit.png"/>Salir</button>
-            </form>
+        <div class="encuadre-informacion">
+                <header class="barra-navegacion">
+            <nav>
+                <ul>
+                    <li><img class="imagen-usuario" src="img/icono-usuario.png" alt="Icono de usuario">
+                    </li>
+                    <li>
+                        <p class="texto-usuario">Cuenta de Admin</p>
+                    </li>
+                    <li>
+                        <a href="index.html" class="cerrar-sesion">
+                            <p class="texto-cerrar-sesion">Cerrar <br> Sesión</p>
+                            <div class="cerrar-sesion-div-img">
+                                <img class="cerrar-sesion-img" src="img/cerrar-sesion.png" alt="Cerrar sesión">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <div class="titulo">
+            <a href="index.html" class="volver">
+                <img class="imagen-volver" src="img/volver-atras.png" alt="Volver">
+                <p class="texto-volver">Volver</p>
+            </a>
+            <h1 class="menu-usuario-titulo">Menú</h1>
+        </div>
+        <div class="botones-menu">
+            <a href="productosadmin.html">
+                <p>Ver productos</p>
+                <img class="imagenes-menu-usuario" src="img/ver-productos.png" alt="Imagen de ver pujas">
+            </a>
+            <a href="ofrecidosadmin.html">
+                <p>Ver productos ofertados</p>
+                <img class="imagenes-menu-usuario" src="img/ofrecer-productos.png" alt="Imagen de ver productos ofertados">
+            </a>
+            <a href="#">
+                <p>Resetear catálogo</p>
+                <img class="imagenes-menu-usuario" src="img/resetear-productos.png" alt="Imagen de resetear catálogo">
+            </a>
+            <a href="historialadmin.html">
+                <p>Historial ganadores</p>
+                <img class="imagenes-menu-usuario" src="img/ver-historial-pujas.png" alt="Imagen de historial ganadores">
+            </a>
+            <a href="pujasadmin.html">
+                <p>Pujas Recientes</p>
+                <img class="imagenes-menu-usuario" src="img/pujas-recientes.png" alt="Imagen de Pujas Recientes">
+            </a>
+            <a href="index.html">
+                <p>Salir</p>
+                <img class="imagenes-menu-usuario" src="img/salir.png" alt="Imagen de exit">
+            </a>
+        </div>
+            </div>
         <#else>
-            <h1>Menú Usuario</h1>
-            <form action="/user/offer" method="post">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/offer.png"/>Subir ofertas</button>
-            </form>
-            <form action="/user/offer-list" method="get">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/buy.png"/>Ver ofertas y pujar</button>
-            </form>
-            <form action="/exit" method="get">
-                <button type="submit" class="btn btn-lg"><img class="icon-sm" src="/imgs/icons/exit.png"/>Salir</button>
-            </form>
+            <div class="encuadre-informacion">
+        <header class="barra-navegacion">
+            <nav>
+                <ul>
+                    <li><img class="imagen-usuario" src="img/icono-usuario.png" alt="Icono de usuario">
+                    </li>
+                    <li>
+                        <p class="texto-usuario">Cuenta de Usuario</p>
+                    </li>
+                    <li>
+                        <a href="index.html" class="cerrar-sesion">
+                            <p class="texto-cerrar-sesion">Cerrar <br> Sesión</p>
+                            <div class="cerrar-sesion-div-img">
+                                <img class="cerrar-sesion-img" src="img/cerrar-sesion.png" alt="Cerrar sesión">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <div class="titulo">
+            <a href="index.html" class="volver">
+                <img class="imagen-volver" src="img/volver-atras.png" alt="Volver">
+                <p class="texto-volver">Volver</p>
+            </a>
+            <h1 class="menu-usuario-titulo">Menú</h1>
+        </div>
+        <div class="botones-menu">
+            <a href="productosusuario.html">
+                <p>Ver productos y pujar</p>
+                <img class="imagenes-menu-usuario" src="img/ofrecer-productos.png" alt="Imagen de ver productos">
+            </a>
+            <a href="ofrecerproducto.html">
+                <p>Ofrecer productos</p>
+                <img class="imagenes-menu-usuario" src="img/ver-productos.png" alt="Imagen de ofrecer productos">
+            </a>
+            <a href="historialpujasusuario.html">
+                <p>Ver historial pujas</p>
+                <img class="imagenes-menu-usuario" src="img/ver-historial-pujas.png" alt="Imagen de ver historial">
+            </a>
+            <a href="index.html">
+                <p>Salir</p>
+                <img class="imagenes-menu-usuario" src="img/salir.png" alt="Imagen de exit">
+            </a>
+        </div>
+    </div>
         </#if>
     </div>
 </body>
