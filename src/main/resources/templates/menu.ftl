@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú</title>
-    <link rel="icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
+    <link rel="icon" href="img/camiseta-logo.png" type="image/png">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>

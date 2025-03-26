@@ -496,10 +496,33 @@ th {
 
 td {
     background-color: #f4f4f4;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.gestion-usuario-celda {
+    background-color: #f4f4f4;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
 }
 
 tr:nth-child(even) td {
     background-color: #e0e0e0;
+}
+
+.gestion-usuario-boton {
+    display: inline-block;
+    border: none;
+    background-color: seagreen;
+    border-radius: 3px;
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-decoration: none;
 }
 
 /* FIN ESTILOS TABLAS */

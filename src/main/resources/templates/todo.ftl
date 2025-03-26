@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú</title>
-    <link rel="icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
+    <link rel="icon" href="img/camiseta-logo.png" type="image/png">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
                     <li><img class="imagen-usuario" src="img/icono-usuario.png" alt="Icono de usuario">
                     </li>
                     <li>
-                        <p class="texto-usuario">Cuenta de Admin</p>
+                        <p class="texto-usuario">Cuenta de ${username}</p>
                     </li>
                     <li>
                         <a href="index.html" class="cerrar-sesion">
@@ -30,17 +30,17 @@
         </header>
         <table id="notas">
             <tr>
-                <th>ID</th>
-                <th>Título</th>
-                <th>Actualizar</th>
-                <th>Eliminar</th>
+                <th><p class="th">ID</p></th>
+                <th><p class="th">Rol</p></th>
+                <th><p class="th">Actualizar</p></th>
+                <th><p class="th">Eliminar</p></th>
             </tr>
             <#list usuarios as usr>
                 <tr>
-                    <td><a href="${'nota/' + usr.nombre}" class="boton">${usr.nombre}</a></td>
-                    <td>${usr.rol!""}</td>
-                    <td><a href="${'edita-nota/' + usr.nombre}">Editar</a></td>
-                    <td><a href="${'elimina-nota/' + usr.nombre}">Borrar</a></td>
+                    <td><a href="${'nota/' + usr.nombre}" class="gestion-usuario-boton">${usr.nombre}</a></td>
+                    <td><a class="gestion-usuario-celda">${usr.rol!""}</a></td>
+                    <td><a href="${'edita-nota/' + usr.nombre}" class="gestion-usuario-boton">Editar</a></td>
+                    <td><a href="${'elimina-nota/' + usr.nombre}" class="gestion-usuario-boton">Borrar</a></td>
                 </tr>
             </#list>
         </table>
