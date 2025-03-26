@@ -17,7 +17,7 @@
                         <li><img class="imagen-usuario" src="img/icono-usuario.png" alt="Icono de usuario">
                         </li>
                         <li>
-                            <p class="texto-usuario">Cuenta de Admin</p>
+                            <p class="texto-usuario">Cuenta de ${username}</p>
                         </li>
                         <li>
                             <a href="index.html" class="cerrar-sesion">
@@ -81,7 +81,7 @@
                         <li><img class="imagen-usuario" src="img/icono-usuario.png" alt="Icono de usuario">
                         </li>
                         <li>
-                            <p class="texto-usuario">Cuenta de Usuario</p>
+                            <p class="texto-usuario">Cuenta de ${username}</p>
                         </li>
                         <li>
                             <a href="index.html" class="cerrar-sesion">

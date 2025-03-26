@@ -62,6 +62,7 @@ public class MainController {
         boolean isAdministrator = context.sessionAttribute("isAdministrator");
         Map<String, Object> model = new HashMap<>();
         model.put("isAdministrator", isAdministrator);
+        model.put("username", username);
         context.render("/templates/menu.ftl", model);
     }
 
