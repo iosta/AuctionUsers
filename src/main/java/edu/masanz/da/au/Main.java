@@ -27,6 +27,12 @@ public class Main {
 
         app.get("/admin/*", MainController::iniciar);
         app.post("/admin/*", MainController::iniciar);
+
+        app.get("/eliminar-usuario/{name}", MainController::servirEliminarUsuario);
+        app.post("/eliminar-usuario/{name}", MainController::eliminarUsuario);
+
+        app.get("/editar-usuario/{name}", MainController::servirEditarUsuario);
+        app.post("/editar-usuario/{name}", MainController::editarUsuario);
     }
 
 }

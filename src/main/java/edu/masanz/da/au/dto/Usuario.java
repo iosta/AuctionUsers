@@ -79,18 +79,4 @@ public class Usuario implements Comparable<Usuario> {
             return this.rol.compareTo(o.rol);
         }
     }
-
-    public static List<Usuario> listaUsuarios() {
-        List<Usuario> usuarios = new ArrayList<>();
-        for (String lineaUsuario : USUARIOS) {
-            String[] campos = lineaUsuario.split(",");
-            String nombre = campos[0];
-            String sal = campos[1];
-            String hashPwSal = campos[2];
-            String rol = campos[3];
-            Usuario usuario = new Usuario(nombre, sal, hashPwSal, rol);
-            usuarios.add(usuario);
-        }
-        return usuarios;
-    }
 }

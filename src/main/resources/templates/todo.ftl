@@ -37,10 +37,10 @@
             </tr>
             <#list usuarios as usr>
                 <tr>
-                    <td><a href="${'nota/' + usr.nombre}" class="gestion-usuario-boton">${usr.nombre}</a></td>
-                    <td><a class="gestion-usuario-celda">${usr.rol!""}</a></td>
-                    <td><a href="${'edita-nota/' + usr.nombre}" class="gestion-usuario-boton">Editar</a></td>
-                    <td><a href="${'elimina-nota/' + usr.nombre}" class="gestion-usuario-boton">Borrar</a></td>
+                    <td>${usr.nombre}</td>
+                    <td>${usr.rol!""}</td>
+                    <td><a href="/editar-usuario/${usr.nombre}" class="gestion-usuario-boton">Editar</a></td>
+                    <td><a href="/eliminar-usuario/${usr.nombre}" class="gestion-usuario-boton">Borrar</a></td>
                 </tr>
             </#list>
         </table>
