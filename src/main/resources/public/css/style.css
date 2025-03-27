@@ -645,3 +645,49 @@ tr:nth-child(even) td {
 }
 
 /* FIN PUJAR PRODUCTO */
+
+/* EDITAR Y BORRAR USUARIOS */
+
+.boton-usuarios-gestion {
+    display: inline-block;
+    border: none;
+    background-color: seagreen;
+    border-radius: 3px;
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-decoration: none;
+    margin: 0px 20px 20px;
+    font-size: 12px;
+}
+
+.boton-usuarios-gestion:hover {
+    color: white;
+    background-color: rgb(27, 95, 57);
+}
+
+.campo-texto-label {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.introduccion-texto {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 6px;
+}
+
+.titulos {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

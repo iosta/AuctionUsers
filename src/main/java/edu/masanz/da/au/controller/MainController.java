@@ -93,7 +93,7 @@ public class MainController {
         Map<String, Object> model = new HashMap<>();
         Usuario usuario = AuctionService.obtenerUsuario(nombreUsuario);
         if (usuario == null) {
-            model.put("mensajeError", "Usuario no encontrada");
+            model.put("mensajeError", "Usuario no encontrado");
             context.render("templates/eliminar-usuario.ftl", model);
             return;
         }

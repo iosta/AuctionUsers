@@ -1,43 +1,62 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Usuario</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="icon" href="img/camiseta-logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
-<h1>Editar Usuario</h1>
-<a href="/todo">Regresar al listado</a>
-<br/><br/>
-
-<#if mensajeError?has_content>
-    <div class="error">${mensajeError}</div>
-<#else>
     <div class="encuadre-informacion">
-    <form action="/editar-usuario/${usuario.nombre}" method="POST">
-        <div class="container">
-            <div class="w25 center">
-                <#if usuario.nombre?has_content>
-                    <label for="nombre">Nombre de Usuario</label>
-                    <input type="text" name="nombre" value="${usuario.nombre}" disabled="disabled"/>
-                </#if>
-            </div>
-            <div class="w75">
-                <label for="rol">Rol</label>
-                <input type="text" id="rol" name="rol" value="${usuario.rol}" required/>
-            </div>
-            <div class="w75">
-                <label for="password">Nueva Contraseña</label>
-                <input type="password" id="password" name="password" placeholder="Dejar en blanco para no cambiar"/>
-            </div>
+        <header class="barra-navegacion">
+            <nav>
+                <ul>
+                    <li><img class="imagen-usuario" src="/img/icono-usuario.png" alt="Icono de usuario">
+                    </li>
+                    <li>
+                        <p class="texto-usuario">Cuenta de ${usuario}</p>
+                    </li>
+                    <li>
+                        <a href="index.html" class="cerrar-sesion">
+                            <p class="texto-cerrar-sesion">Cerrar <br> Sesión</p>
+                            <div class="cerrar-sesion-div-img">
+                                <img class="cerrar-sesion-img" src="/img/cerrar-sesion.png" alt="Cerrar sesión">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+            
+        <h1 class="titulos">Editar Usuario</h1>
 
-        </div>
-        <br/>
-        <button type="submit">Guardar Cambios</button>
-    </form>
+        <#if mensajeError?has_content>
+            <div class="error">${mensajeError}</div>
+        <#else>
+            <form action="/editar-usuario/${usuario.nombre}" method="POST">
+                <div class="container">
+                    <div class="w25 center">
+                        <#if usuario.nombre?has_content>
+                            <label for="nombre" class="campo-texto-label">Nombre de Usuario</label>
+                            <input type="text" class="introduccion-texto" name="nombre" value="${usuario.nombre}" disabled="disabled"/>
+                        </#if>
+                    </div>
+                    <div class="w75">
+                        <label for="rol" class="campo-texto-label">Rol</label>
+                        <input type="text" class="introduccion-texto" id="rol" name="rol" value="${usuario.rol}" required/>
+                    </div>
+                    <div class="w75">
+                        <label for="password" class="campo-texto-label">Nueva Contraseña</label>
+                        <input type="password" class="introduccion-texto" id="password" name="password" placeholder="No cambiar!"/>
+                    </div>
+                </div>
+                <br/>
+                <button type="submit" class="boton-usuarios-gestion">Guardar Rol</button>
+                <button type="submit" class="boton-usuarios-gestion">Guardar Contraseña</button>
+                <a href="/todo" class="boton-usuarios-gestion">Regresar al listado</a>
+            </form>
+        </#if>
     </div>
-</#if>
-
 </body>
 </html>
