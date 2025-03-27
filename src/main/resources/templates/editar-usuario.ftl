@@ -44,7 +44,10 @@
                     </div>
                     <div class="w75">
                         <label for="rol" class="campo-texto-label">Rol</label>
-                        <input type="text" class="introduccion-texto" id="rol" name="rol" value="${usuario.rol}" required/>
+                        <select class="introduccion-texto" id="rol" name="rol" required>
+                            <option value="ADMIN" <#if usuario.rol == "ADMIN">selected</#if>>ADMIN</option>
+                            <option value="USER" <#if usuario.rol == "USER">selected</#if>>USER</option>
+                        </select>
                     </div>
                     <div class="w75">
                         <label for="password" class="campo-texto-label">Nueva Contraseña</label>
