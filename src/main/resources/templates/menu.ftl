@@ -62,7 +62,7 @@
                     <p>Pujas Recientes</p>
                     <img class="imagenes-menu-usuario" src="img/pujas-recientes.png" alt="Imagen de Pujas Recientes">
                 </a>
-                <a href="todo">
+                <a href="gestion-usuarios">
                     <p>Gestionar Usuarios</p>
                     <img class="imagenes-menu-usuario" src="img/gestion-usuarios.png"
                          alt="Imagen de Gestion de Usuarios">

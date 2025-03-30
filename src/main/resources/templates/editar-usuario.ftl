@@ -57,7 +57,7 @@
                 <br/>
                 <button type="submit" class="boton-usuarios-gestion">Guardar Rol</button>
                 <button type="submit" class="boton-usuarios-gestion">Guardar Contraseña</button>
-                <a href="/todo" class="boton-usuarios-gestion">Regresar al listado</a>
+                <a href="/gestion-usuarios" class="boton-usuarios-gestion">Regresar al listado</a>
             </form>
         </#if>
     </div>

@@ -3,10 +3,8 @@ package edu.masanz.da.au.controller;
 import edu.masanz.da.au.service.AuctionService;
 import edu.masanz.da.au.dto.*;
 
-import edu.masanz.da.au.utils.Security;
 import io.javalin.http.Context;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -85,7 +83,7 @@ public class MainController {
         Map<String, Object> model = new HashMap<>();
         model.put("username", username);
         model.put("usuarios", usuarios);
-        context.render("/templates/todo.ftl", model);
+        context.render("/templates/gestion-usuarios.ftl", model);
     }
 
     public static void servirEliminarUsuario(Context context) {
@@ -105,7 +103,7 @@ public class MainController {
     public static void eliminarUsuario(Context context){
         String nombreUsuario = context.pathParam("name");
         if (AuctionService.eliminarUsuario(nombreUsuario)) {
-            context.redirect("/todo");
+            context.redirect("/gestion-usuarios");
         }else {
             context.redirect("/error");
         }
@@ -131,12 +129,12 @@ public class MainController {
         if (AuctionService.modificarRolUsuario(nombreUsuario, rol)) {
             if (password != null && !password.isEmpty()) {
                 if (AuctionService.modificarPasswordUsuario(nombreUsuario, password)) {
-                    context.redirect("/todo");
+                    context.redirect("/gestion-usuarios");
                 } else {
                     context.redirect("/error");
                 }
             } else {
-                context.redirect("/todo");
+                context.redirect("/gestion-usuarios");
             }
         } else {
             context.redirect("/error");

@@ -47,7 +47,7 @@
                 <br/><br/>
             </#if>
                 <form action="/eliminar-usuario/${usuario.nombre}" method="POST">
-                    <a href="/todo" class="boton-usuarios-gestion">Volver a la lista</a>
+                    <a href="/gestion-usuarios" class="boton-usuarios-gestion">Volver a la lista</a>
                     <input type="submit" class="boton-usuarios-gestion" value="Confirmar"/>
                 </form>
         </#if>
